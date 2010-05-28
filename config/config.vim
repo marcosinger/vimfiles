@@ -62,6 +62,7 @@ set foldmethod=manual
 set number
 set incsearch
 set nohlsearch
+set ruler
 
 " Other files.
 source ~/.vim/config/mappings.vim
