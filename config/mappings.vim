@@ -12,12 +12,12 @@ map <F3> :tabnew $HOME/.taskpaper<CR>:tabm 0<CR>
 map <F4> <ESC>:set spell!<CR>
 imap <F4> <ESC>:set spell!<CR>
 
-" Execute files with Ruby 1.9
-map <F6> <ESC>:w!<CR>:!ruby1.9 %<CR>
-map <S-F6> <ESC>:w!<CR>:!ruby1.9 -c %<CR>
+" Toggle 80 character overflow alert
+map <F6> <ESC>:match ErrorMsg '\%>79v.\+'<CR>
+imap <F6> <ESC>:match ErrorMsg '\%>79v.\+'<CR>
 
 " Format selection with par
-vmap <F8> :!par<CR>
+vmap <F8> :!par 79<CR>
 
 " Toggle search highlight
 map <F10> :set hlsearch!<CR>
