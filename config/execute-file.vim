@@ -13,7 +13,8 @@ function! ExecuteFile()
   elseif stridx(file, "_test.rb") != -1
     call ExecuteTest()
   elseif stridx(file, ".rb") != -1
-    execute "!ruby -c %"
+    " execute !ruby -c %"
+    call ExecuteTest()
   elseif stridx(file, ".lua") != -1
     call PreviewResults("lua " . file)
   elseif stridx(file, ".min") != -1
