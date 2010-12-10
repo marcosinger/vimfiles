@@ -63,6 +63,10 @@ set number
 set incsearch
 set nohlsearch
 set ruler
+set textwidth=79
+set formatoptions+=t
+set showmatch
+set matchtime=1
 
 " Other files.
 source ~/.vim/config/mappings.vim
