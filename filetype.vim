@@ -7,6 +7,9 @@ augroup filetypedetect
   " Bash aliases and functions
   au! BufNewFile,BufRead *.bash* setf sh
 
+  " dc
+  au! BufNewFile,BufRead *.dc setf dc
+
   " Factor files
   au! BufNewFile,BufRead *.factor setf factor
 
@@ -25,6 +28,9 @@ augroup filetypedetect
   " Irssi logs
   au BufRead,BufNewFile */irclogs*.log setf irssi
 
+  " JSON
+  au! BufNewFile,BufRead *.json setf javascript
+
   " Markdown files
   au! BufNewFile,BufRead *.markdown,*.md setf markdown
 
@@ -32,7 +38,7 @@ augroup filetypedetect
   au! BufNewFile,BufRead *.mo setf mouse
 
   " Prolog
-  au! BufNewFile,BufRead *.yap setf prolog
+  au! BufNewFile,BufRead *.pl setf prolog
 
   " Rack
   au! BufNewFile,BufRead *.ru setf ruby
@@ -43,6 +49,9 @@ augroup filetypedetect
   " RC files
   au! BufNewFile,BufRead *.rc,.rcrc,.rc_profile setf rc
 
+  " Ruby files
+  au! BufNewFile,BufRead *.thor,Thorfile,Rakefile,Vagrantfile setf ruby
+
   " Sass files
   au! BufNewFile,BufRead *.sass setf sass
 
@@ -52,11 +61,9 @@ augroup filetypedetect
   " Taskpaper files
   au! BufNewFile,BufRead *.taskpaper setf taskpaper
 
-  " Thor files
-  au! BufNewFile,BufRead *.thor,Thorfile,Rakefile setf ruby
-
   " AsciiDoc
-  au! FileType markdown,asciidoc setlocal spell
   au! BufNewFile,BufRead *.txt setf asciidoc
 
+  " File type settings for Markdown, AsciiDoc
+  au! FileType markdown,asciidoc setlocal spell
 augroup END
