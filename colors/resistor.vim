@@ -1,5 +1,5 @@
 set t_Co=256
-highlight Normal ctermfg=White ctermbg=Black
+" highlight Normal ctermfg=White ctermbg=Black
 highlight Number ctermfg=White ctermbg=Black
 highlight LineNr ctermfg=DarkGray ctermbg=Black
 highlight Folded ctermfg=DarkBlue ctermbg=Black
@@ -22,7 +22,7 @@ highlight String ctermfg=DarkGreen
 highlight Search ctermbg=White
 highlight Todo ctermbg=Black ctermfg=Yellow
 highlight Title ctermbg=Black ctermfg=Yellow
-highlight ModeMsg ctermfg=white ctermbg=DarkGreen
+highlight ModeMsg ctermfg=White ctermbg=DarkGreen
 highlight NonText ctermfg=DarkGray ctermbg=Black
 highlight Visual ctermfg=Gray ctermbg=DarkRed
 highlight TabLine cterm=bold ctermfg=Black ctermbg=Gray
@@ -31,4 +31,7 @@ highlight TabLineSel cterm=NONE ctermfg=White ctermbg=DarkRed
 highlight StatusLine ctermfg=Gray ctermbg=Black
 highlight StatusLineNC ctermfg=DarkGray ctermbg=Black
 highlight CursorLine cterm=NONE  ctermbg=NONE
-highlight MatchParen ctermbg=Black ctermfg=DarkYellow
+highlight MatchParen ctermbg=White ctermfg=DarkGray
+highlight PreProc ctermbg=Black ctermfg=DarkYellow
+highlight Special ctermbg=Black ctermfg=DarkYellow
+highlight Delimiter ctermbg=Black ctermfg=DarkRed
