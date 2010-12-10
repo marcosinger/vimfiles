@@ -6,4 +6,4 @@ set ts=2
 call IMAP('##', '%(<++>)s', 'scheme')
 call IMAP('""', "\"<++>\"", 'scheme')
 call IMAP("''", "'<++>'", 'scheme')
-call IMAP('()', "\(<++>\)<++>", 'scheme')
+call IMAP('()', "\(<++>\)", 'scheme')
