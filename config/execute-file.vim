@@ -32,8 +32,8 @@ function! ExecuteFile()
     execute "!sass % " . substitute(file, "\.sass$", ".css", "")
   elseif stridx(file, ".html") != -1
     execute "!open %"
-  elseif stridx(file, ".s") != -1
-    call PreviewResults("shiny " . file)
+  elseif stridx(file, ".ss") != -1
+    call PreviewResults("gosh " . file)
   endif
 endfunction
 
