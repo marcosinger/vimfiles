@@ -31,7 +31,7 @@ highlight TabLineSel cterm=NONE ctermfg=White ctermbg=DarkRed
 highlight StatusLine ctermfg=Gray ctermbg=Black
 highlight StatusLineNC ctermfg=DarkGray ctermbg=Black
 highlight CursorLine cterm=NONE  ctermbg=NONE
-highlight MatchParen ctermbg=White ctermfg=DarkGray
+highlight MatchParen ctermbg=Black ctermfg=Yellow
 highlight PreProc ctermbg=Black ctermfg=DarkYellow
 highlight Special ctermbg=Black ctermfg=DarkYellow
-highlight Delimiter ctermbg=Black ctermfg=DarkRed
+highlight Delimiter ctermbg=Black ctermfg=Gray
