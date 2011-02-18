@@ -56,6 +56,9 @@ map <2-MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 imap <2-MiddleMouse> <Nop>
 
+" Deactivate Ex-mode
+map Q <Nop>
+
 " Deactivate recording
 map q <Nop>
 
