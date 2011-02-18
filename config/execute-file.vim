@@ -32,8 +32,8 @@ function! ExecuteFile()
     execute "!sass % " . substitute(file, "\.sass$", ".css", "")
   elseif stridx(file, ".html") != -1
     execute "!open %"
-  elseif stridx(file, ".ss") != -1
-    call PreviewResults("gosh " . file)
+  elseif stridx(file, ".scm") != -1
+    execute "!chibi-scheme %"
   endif
 endfunction
 
