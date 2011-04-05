@@ -1,59 +1,39 @@
 " Vim syntax file
-" Language:		eRuby
-" Maintainer:		Doug Kearns <dougkearns@gmail.com>
-" Info:			$Id: eruby.vim,v 1.4 2006/04/15 20:22:46 vimboss Exp $
-" URL:			http://vim-ruby.rubyforge.org
-" Anon CVS:		See above site
-" Release Coordinator:	Doug Kearns <dougkearns@gmail.com>
+" Language:	   eruby
+" Maintainer:  Michael Brailsford <brailsmt@yahoo.com>
+" Installation:
+"	To automatilcally load this file when a .rhtml file is opened, add the
+"	following lines to ~/.vim/filetype.vim:
+"
+"		augroup filetypedetect
+" 			au! BufRead,BufNewFile *.rhtml		setfiletype eruby
+" 		augroup END
+"
+"	You will have to restart vim for this to take effect.  In any case it 
+"	is a good idea to read ":he new-filetype" so that you know what is going
+"	on, and why the above lines work.
 
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
 if version < 600
-  syntax clear
+	syntax clear
 elseif exists("b:current_syntax")
-  finish
+	finish
 endif
 
-if !exists("main_syntax")
-  let main_syntax = 'eruby'
-endif
+"Source the html syntax file
+ru! syntax/html.vim
+"Set the filetype to html to load the html ftplugins
+set ft=html
+unlet b:current_syntax
 
-if version < 600
-  so <sfile>:p:h/html.vim
-  syn include @rubyTop <sfile>:p:h/ruby.vim
-else
-  runtime! syntax/html.vim
-  unlet b:current_syntax
-  syn include @rubyTop syntax/ruby.vim
-endif
+"Put the ruby syntax file in @rubyTop
+syn include @rubyTop syntax/ruby.vim
 
-syn cluster erubyRegions contains=erubyOneLiner,erubyBlock,erubyExpression,erubyComment
+syn region erubyBlock matchgroup=erubyRubyDelim start=#<%=\?# end=#%># keepend containedin=ALL contains=@rubyTop,erubyEnd
+syn region erubyComment start=+<%#+ end=#%># keepend
+syn match erubyEnd #\<end\>#
 
-syn region  erubyOneLiner   matchgroup=erubyDelimiter start="^%%\@!" end="$"  contains=@rubyTop	       containedin=ALLBUT,@erubyRegions keepend oneline
-syn region  erubyBlock	    matchgroup=erubyDelimiter start="<%%\@!" end="%>" contains=@rubyTop	       containedin=ALLBUT,@erubyRegions
-syn region  erubyExpression matchgroup=erubyDelimiter start="<%="    end="%>" contains=@rubyTop	       containedin=ALLBUT,@erubyRegions
-syn region  erubyComment    matchgroup=erubyDelimiter start="<%#"    end="%>" contains=rubyTodo,@Spell containedin=ALLBUT,@erubyRegions keepend
+hi link erubyRubyDelim todo
+hi link erubyComment comment
+hi link erubyEnd rubyControl
 
-" Define the default highlighting.
-" For version 5.7 and earlier: only when not done already
-" For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_eruby_syntax_inits")
-  if version < 508
-    let did_ruby_syntax_inits = 1
-    command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
-  endif
-
-  HiLink erubyDelimiter		Delimiter
-  HiLink erubyComment		Comment
-
-  delcommand HiLink
-endif
-let b:current_syntax = "eruby"
-
-if main_syntax == 'eruby'
-  unlet main_syntax
-endif
-
-" vim: nowrap sw=2 sts=2 ts=2 ff=unix:
+" vim: set ts=4 sw=4:
