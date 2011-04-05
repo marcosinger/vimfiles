@@ -66,6 +66,10 @@ set formatoptions+=t
 set showmatch
 set matchtime=1
 
+" Hide status line when in insert mode.
+au InsertEnter * hi StatusLine ctermfg=Black ctermbg=Black
+au InsertLeave * hi StatusLine ctermfg=Gray ctermbg=Black
+
 " Other files.
 source ~/.vim/config/mappings.vim
 source ~/.vim/config/commenter.vim
