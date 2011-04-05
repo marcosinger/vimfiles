@@ -52,8 +52,6 @@ endif
 
 " Case insensitive, incremental search, manual folds, etc.
 set nocompatible
-set autoindent
-set smartindent
 set iminsert=0
 set gdefault
 set ignorecase
