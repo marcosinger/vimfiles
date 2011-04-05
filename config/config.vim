@@ -25,7 +25,7 @@ set showtabline=2
 set laststatus=2
 
 " Cursor line
-set cursorline
+set nocursorline
 
 " Temp files
 set nobackup
