@@ -7,6 +7,9 @@ augroup filetypedetect
   " Bash aliases and functions
   au! BufNewFile,BufRead *.bash* setf sh
 
+  " Bandicoot
+  au! BufNewFile,BufRead *.b setf bandicoot
+
   " dc
   au! BufNewFile,BufRead *.dc setf dc
 
@@ -38,7 +41,7 @@ augroup filetypedetect
   au! BufNewFile,BufRead *.mo setf mouse
 
   " Prolog
-  au! BufNewFile,BufRead *.pl setf prolog
+  au! BufNewFile,BufRead *.pro setf prolog
 
   " Rack
   au! BufNewFile,BufRead *.ru setf ruby
