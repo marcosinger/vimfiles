@@ -25,8 +25,9 @@ call IMAP('h1--', '<h1><++></h1>', 'eruby')
 call IMAP('h2--', '<h2><++></h2>', 'eruby')
 call IMAP('h3--', '<h3><++></h3>', 'eruby')
 call IMAP('div--', '<div><++></div>', 'eruby')
-call IMAP('%%', '<% <++> %>', 'eruby')
-call IMAP('%$', '<%= <++> %>', 'eruby')
+call IMAP('%%', '<% <++> %>', 'ruby')
+call IMAP('%$', '<%= <++> %>', 'ruby')
+call IMAP('%#', '<%# <++> %>', 'ruby')
 
 " Quick samples
 call IMAP('array--', "[1, 2, 3, 4, 5]", 'ruby')
