@@ -4,6 +4,10 @@ filetype on
 filetype indent on
 filetype plugin on
 
+" Color
+set background=dark
+color resistor
+
 " Change default mapleader to a comma
 let mapleader = ","
 let maplocalleader = ","
