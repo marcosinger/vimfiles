@@ -7,6 +7,8 @@ au! FileType javascript let b:comment = '//'
 au! FileType vim        let b:comment = '"'
 au! FileType prolog     let b:comment = '%'
 au! FileType dc         let b:comment = '#'
+au! FileType sh         let b:comment = '#'
+au! FileType bandicoot  let b:comment = '#'
 
 function! CommentAndUncomment() range
   if !exists("b:comment")
