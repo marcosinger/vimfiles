@@ -55,7 +55,6 @@ if $SHELL =~ 'bin/fish'
 endif
 
 " Case insensitive, incremental search, manual folds, etc.
-set nocompatible
 set iminsert=0
 set gdefault
 set ignorecase
@@ -69,6 +68,9 @@ set textwidth=79
 set formatoptions+=t
 set showmatch
 set matchtime=1
+
+" Show command in status bar
+set showcmd
 
 " Hide status line when in insert mode.
 au InsertEnter * hi StatusLine ctermfg=Black ctermbg=Black
