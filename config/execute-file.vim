@@ -4,21 +4,12 @@ function! ExecuteFile()
 
   if stridx(file, "/tmp/sample.rb") != -1
     call ExecuteTest()
-  elseif stridx(file, ".mo") != -1
-    call PreviewResults("mo " . file)
-  elseif stridx(file, ".io") != -1
-    call PreviewResults("osxvm " . file)
-  elseif stridx(file, ".ml") != -1
-    call PreviewResults("ocaml " . file)
   elseif stridx(file, "_test.rb") != -1
     call ExecuteTest()
   elseif stridx(file, ".rb") != -1
-    " execute !ruby -c %"
     call ExecuteTest()
   elseif stridx(file, ".lua") != -1
-    call PreviewResults("lua " . file)
-  elseif stridx(file, ".min") != -1
-    call PreviewResults("min " . file)
+    execute "!lua %"
   elseif stridx(file, ".haml") != -1
     execute "!haml % " . substitute(file, "\.haml$", ".html", "")
   elseif stridx(file, ".dot") != -1
@@ -34,6 +25,8 @@ function! ExecuteFile()
     execute "!open %"
   elseif stridx(file, ".scm") != -1
     execute "!chibi-scheme %"
+  elseif stridx(file, ".pure") != -1
+    execute "!pure -i %"
   endif
 endfunction
 
