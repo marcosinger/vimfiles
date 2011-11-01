@@ -28,6 +28,12 @@ set textwidth=0
 set showtabline=2
 set laststatus=2
 
+" Window management
+set splitbelow splitright
+set equalalways
+set winminheight=0
+set winminwidth=0
+
 " Cursor line
 set nocursorline
 
