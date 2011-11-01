@@ -21,14 +21,16 @@ highlight NonText               ctermfg=DarkGray  ctermbg=Black
 highlight Visual                ctermfg=Gray      ctermbg=DarkRed
 highlight TabLine               ctermfg=Black     ctermbg=Gray      cterm=bold
 highlight TabLineFill           ctermfg=Black     ctermbg=DarkGray  cterm=bold
-highlight TabLineSel            ctermfg=White     ctermbg=DarkRed   cterm=NONE
-highlight StatusLine            ctermfg=Gray      ctermbg=Black
+highlight TabLineSel            ctermfg=Black     ctermbg=DarkRed   cterm=NONE
+highlight StatusLine            ctermfg=DarkGray  ctermbg=White
 highlight StatusLineNC          ctermfg=DarkGray  ctermbg=Black
 highlight CursorLine                              ctermbg=NONE      cterm=NONE
 highlight MatchParen            ctermbg=White     ctermfg=Black
 highlight PreProc               ctermbg=Black     ctermfg=DarkYellow
 highlight Special               ctermbg=Black     ctermfg=DarkYellow
 highlight Delimiter             ctermbg=Black     ctermfg=Gray
+highlight VertSplit             ctermbg=DarkGray  ctermfg=DarkGray
+
 
 " Ruby specific.
 highlight rubySymbol                              ctermfg=66
