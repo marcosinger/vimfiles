@@ -37,11 +37,17 @@ augroup filetypedetect
   " Markdown files
   au! BufNewFile,BufRead *.markdown,*.md setf markdown
 
+  " Mote files
+  au! BufNewFile,BufRead *.mote setf mote
+
   " Mouse files
   au! BufNewFile,BufRead *.mo setf mouse
 
   " Prolog
   au! BufNewFile,BufRead *.pro setf prolog
+
+  " Pure
+  au! BufNewFile,BufRead *.pure setf pure
 
   " Rack
   au! BufNewFile,BufRead *.ru setf ruby
@@ -66,7 +72,4 @@ augroup filetypedetect
 
   " AsciiDoc
   au! BufNewFile,BufRead *.txt setf asciidoc
-
-  " File type settings for Markdown, AsciiDoc
-  au! FileType markdown,asciidoc setlocal spell
 augroup END
