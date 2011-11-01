@@ -82,6 +82,9 @@ set showcmd
 au InsertEnter * hi StatusLine ctermfg=Black ctermbg=Black
 au InsertLeave * hi StatusLine ctermfg=Gray ctermbg=Black
 
+" Allow movement past the last character of the line.
+set virtualedit=block,onemore
+
 " Other files.
 source ~/.vim/config/mappings.vim
 source ~/.vim/config/commenter.vim
