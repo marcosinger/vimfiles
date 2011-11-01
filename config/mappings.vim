@@ -12,11 +12,8 @@ map <F3> :tabnew $HOME/.taskpaper<CR>:tabm 0<CR>
 map <F4> <ESC>:set spell!<CR>
 imap <F4> <ESC>:set spell!<CR>
 
-" Toggle 80 character overflow alert
-map <F6> <ESC>:match ErrorMsg '\%>79v.\+'<CR>
-imap <F6> <ESC>:match ErrorMsg '\%>79v.\+'<CR>
-
 " Format selection with par
+map <F8> vap :!par 79<CR>
 vmap <F8> :!par 79<CR>
 
 " Toggle search highlight
@@ -86,8 +83,7 @@ imap <C-H> <ESC>ha
 " Open file in new tab
 nmap <C-O> :tabe 
 
-" Run git blame in the current file and display results in the preview window.
-map <C-G> :call PreviewResults("git blame " . expand("%"))<CR>
+nmap <silent> <C-w>. <C-w>_
 
 " Add estimations from taskpaper @estimation context
 vmap <silent> <Leader>add :write !awk 'BEGIN { total = 0 }; /@estimate/ { total += $NF }; END { print "Total", total }'<CR>
