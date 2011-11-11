@@ -6,7 +6,7 @@ filetype plugin on
 
 " Color
 set background=dark
-color resistor
+color molokai
 
 " Change default mapleader to a comma
 let mapleader = ","
