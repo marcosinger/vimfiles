@@ -7,6 +7,7 @@ set guioptions-=m
 set guioptions+=a
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)
 set winminheight=0
+set guifont=Monaco:h12
 
 " Color settings
 color darkburn

@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/marcosinger/Sites/ruby/nu/eye4design'
+let g:netrw_dirhist_2='/Volumes/MARCO/Sites/busk/pocnew'
+let g:netrw_dirhist_3='/Volumes/MARCO/Sites/busk/pocnew/js'
+let g:netrw_dirhist_4='/Users/marcosinger/Sites/busk/pocnew'
+let g:netrw_dirhist_5='/Users/marcosinger/Sites/ruby/concretesolutions/ic_iceleres_bpm'
+let g:netrw_dirhist_6='/Users/marcosinger/Sites/ruby/concretesolutions/ic_iceleres_bpm/spec'
+let g:netrw_dirhist_7='/Users/marcosinger/Sites/ruby/concretesolutions/ic_iceleres_bpm/spec/requests'
+let g:netrw_dirhist_8='/Users/marcosinger/Sites/busk/pocnew'
+let g:netrw_dirhist_9='/Users/marcosinger/Sites/ruby/concretesolutions/ic_iceleres_bpm'
