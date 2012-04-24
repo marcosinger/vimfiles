@@ -1,6 +1,14 @@
+" ICELERES MAPS
+" map <Leader>dev_server  <ESC>:cd | :echo $IC_ICELERES_USERS<CR>:!script/dev_server<CR>
+" map <Leader>test_server <ESC>:cd | :echo $IC_ICELERES_USERS<CR>:!script/test_server<CR>
+" map <Leader>test_server <ESC>:cd | :echo $IC_ICELERES_USERS<CR>:!script/test_server 8082<CR>
+" 
 " Open scratch files for Ruby (F1) and Mo (S-F1)
 map <F1> :tabnew /tmp/sample.rb<CR>:tabm 0<CR>
 imap <F1> <ESC>:tabnew /tmp/sample.rb<CR>:tabm 0<CR>
+
+
+map <Leader>tag :TagbarToggle<CR>
 
 " Source current file
 map <F2> :source %<CR>
@@ -9,8 +17,10 @@ map <F2> :source %<CR>
 map <F3> :tabnew $HOME/.taskpaper<CR>:tabm 0<CR>
 
 " Toggle spell
-map <F4> <ESC>:set spell!<CR>
-imap <F4> <ESC>:set spell!<CR>
+" map <F4> <ESC>:set spell!<CR>
+" imap <F4> <ESC>:set spell!<CR>
+
+map <F4> :set hlsearch! hlsearch?<CR>
 
 " Format selection with par
 map <F8> vap :!par 79<CR>
