@@ -3,6 +3,7 @@ syntax on
 filetype on
 filetype indent on
 filetype plugin on
+set nowrap
 
 " Color
 set background=dark
@@ -33,9 +34,6 @@ set splitbelow splitright
 set equalalways
 set winminheight=0
 set winminwidth=0
-
-" Cursor line
-set nocursorline
 
 " Temp files
 set nobackup
@@ -90,6 +88,6 @@ source ~/.vim/config/mappings.vim
 source ~/.vim/config/commenter.vim
 source ~/.vim/config/execute-file.vim
 source ~/.vim/config/execute-test.vim
-source ~/.vim/config/tab-autocomplete.vim
 source ~/.vim/config/imap-snippets.vim
+" source ~/.vim/config/tab-autocomplete.vim
 source ~/.vim/config/preview-results.vim
