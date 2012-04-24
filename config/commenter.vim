@@ -1,4 +1,6 @@
+au! FileType scala      let b:comment = '//'
 au! FileType c          let b:comment = '//'
+au! FileType php        let b:comment = '//'
 au! FileType haml       let b:comment = '-# '
 au! FileType lua        let b:comment = '-- '
 au! FileType ruby       let b:comment = '#'
